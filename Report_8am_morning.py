@@ -282,11 +282,14 @@ class Report8AmMorning(object):
             current_week_satuaday: pd.Timestamp = (pd.to_datetime(self.report_date) - pd.Timedelta(days=1))
             current_month_first_day: str = current_week_satuaday.replace(day=1).strftime('%Y-%m-%d')
             current_week_satuaday: str = current_week_satuaday.strftime('%Y-%m-%d')
-            days: int = pd.to_datetime(current_week_satuaday).day_of_year
+            days_of_month: int = pd.to_datetime(current_week_satuaday).day
+            # 如果本周六在本月的天数大于上月的总天数，则取上月的最后一天
+            if days_of_month > (pd.to_datetime(current_month_first_day) - pd.Timedelta(days=1)).days_in_month:
+                days_of_month = (pd.to_datetime(current_month_first_day) - pd.Timedelta(days=1)).days_in_month
             last_month_first_day: str = (pd.to_datetime(current_month_first_day) -
                                          pd.Timedelta(days=1)).replace(day=1).strftime('%Y-%m-%d')
             last_month_end_date: str = (pd.to_datetime(current_month_first_day) -
-                                        pd.Timedelta(days=1)).replace(day=days).strftime('%Y-%m-%d')
+                                        pd.Timedelta(days=1)).replace(day=days_of_month).strftime('%Y-%m-%d')
             if pd.to_datetime(current_start_date) > pd.to_datetime(last_month_first_day):
                 current_start_date = last_month_first_day
 
@@ -305,7 +308,7 @@ class Report8AmMorning(object):
             last_year_same_week_satuaday: pd.Timestamp = (pd.to_datetime(last_year_same_week_sunday)
                                                           - pd.Timedelta(days=1))
             last_year_same_month_first_day: str = last_year_same_week_satuaday.replace(day=1).strftime('%Y-%m-%d')
-            last_year_same_month_last_day: str = last_year_same_week_satuaday.replace(day=days).strftime('%Y-%m-%d')
+            last_year_same_month_last_day: str = last_year_same_week_satuaday.replace(day=days_of_month).strftime('%Y-%m-%d')
             last_year_start_date: str | None = None
             last_year_end_date: str | None = None
             if pd.to_datetime(last_year_same_week_start_date) > pd.to_datetime(last_year_same_month_first_day):

@@ -107,30 +107,64 @@ class CommonUtils(object):
         :param save_path:
         :return:
         """
+        if date_flag == 'w':
+            img_title = '图：30城新房近8周成交趋势（左）、20城二手房近8周成交趋势（右）'
+        elif date_flag == 'm':
+            img_title = '图：30城新房近6个月成交趋势（左）、20城二手房近6个月成交趋势（右）'
+        else:
+            print('输入错误，请重新输入！')
+            return
         # 创建图表
-        fig, axes = plt.subplots(1, 2, figsize=(12, 6), dpi=100)  # 2行1列布局
+        if date_flag == 'w':
+            fig, axes = plt.subplots(1, 2, figsize=(12, 6), dpi=100)  # 2行1列布局
+            fig.suptitle(img_title, fontsize=20, fontweight='bold')  # 设置标题并加粗
 
-        # 新房成交面积柱状图
-        axes[0].bar(newhouse_deal_df["周度数"], newhouse_deal_df["成交面积"], color='#008080')
-        axes[0].set_title("图：30城新房近8周成交趋势（左）", fontsize=20, fontweight='bold')  # 设置标题并加粗
-        axes[0].set_ylabel("万平方米", fontsize=12, rotation=90)
-        axes[0].tick_params(axis='x', rotation=45)  # 旋转x轴标签
-        axes[0].spines['top'].set_visible(False)  # 去除上边框
-        axes[0].spines['right'].set_visible(False)  # 去除右边框
+            # 新房成交面积柱状图
+            axes[0].bar(newhouse_deal_df["周度数"], newhouse_deal_df["成交面积"], color='#008080')
+            # axes[0].set_title("图：30城新房近8周成交趋势（左）", fontsize=20, fontweight='bold')  # 设置标题并加粗
+            axes[0].set_ylabel("万平方米", fontsize=12, rotation=90)
+            axes[0].tick_params(axis='x', rotation=45)  # 旋转x轴标签
+            axes[0].spines['top'].set_visible(False)  # 去除上边框
+            axes[0].spines['right'].set_visible(False)  # 去除右边框
 
-        # 二手房成交套数柱状图
-        axes[1].bar(secondhouse_deal_df["周度数"], secondhouse_deal_df["成交套数"], color='#ff7f50')
-        axes[1].set_title("图：20城二手房近8周成交趋势（右）", fontsize=20, fontweight='bold')  # 设置标题并加粗
-        axes[1].set_ylabel("套", fontsize=12, rotation=90)
-        axes[1].tick_params(axis='x', rotation=45)  # 旋转x轴标签
-        axes[1].spines['top'].set_visible(False)  # 去除上边框
-        axes[1].spines['right'].set_visible(False)  # 去除右边框
+            # 二手房成交套数柱状图
+            axes[1].bar(secondhouse_deal_df["周度数"], secondhouse_deal_df["成交套数"], color='#ff7f50')
+            # axes[1].set_title("图：20城二手房近8周成交趋势（右）", fontsize=20, fontweight='bold')  # 设置标题并加粗
+            axes[1].set_ylabel("套", fontsize=12, rotation=90)
+            axes[1].tick_params(axis='x', rotation=45)  # 旋转x轴标签
+            axes[1].spines['top'].set_visible(False)  # 去除上边框
+            axes[1].spines['right'].set_visible(False)  # 去除右边框
 
-        # 调整布局并保存
-        plt.tight_layout()
-        plt.savefig(os.path.join(save_path, '新房二手房近8周成交趋势图.png'))  # 可选：保存图表
-        plt.show()
-        print('新房二手房近8周成交趋势图已生成！')
+            # 调整布局并保存
+            plt.tight_layout()
+            plt.savefig(os.path.join(save_path, '新房二手房近8周成交趋势图.png'))  # 可选：保存图表
+            plt.show()
+            print('新房二手房近8周成交趋势图已生成！')
+        elif date_flag == 'm':
+            fig, axes = plt.subplots(1, 2, figsize=(12, 6), dpi=100)  # 2行1列布局
+            fig.suptitle(img_title, fontsize=20, fontweight='bold')  # 设置标题并加粗
+
+            # 新房成交面积柱状图
+            axes[0].bar(newhouse_deal_df["月份"], newhouse_deal_df["成交面积"], color='#008080')
+            # axes[0].set_title("图：30城新房近8周成交趋势（左）", fontsize=20, fontweight='bold')  # 设置标题并加粗
+            axes[0].set_ylabel("万平方米", fontsize=12, rotation=90)
+            axes[0].tick_params(axis='x', rotation=45)  # 旋转x轴标签
+            axes[0].spines['top'].set_visible(False)  # 去除上边框
+            axes[0].spines['right'].set_visible(False)  # 去除右边框
+
+            # 二手房成交套数柱状图
+            axes[1].bar(secondhouse_deal_df["月份"], secondhouse_deal_df["成交套数"], color='#ff7f50')
+            # axes[1].set_title("图：20城二手房近8周成交趋势（右）", fontsize=20, fontweight='bold')  # 设置标题并加粗
+            axes[1].set_ylabel("套", fontsize=12, rotation=90)
+            axes[1].tick_params(axis='x', rotation=45)  # 旋转x轴标签
+            axes[1].spines['top'].set_visible(False)  # 去除上边框
+            axes[1].spines['right'].set_visible(False)  # 去除右边框
+
+            # 调整布局并保存
+            plt.tight_layout()
+            plt.savefig(os.path.join(save_path, '新房二手房近6个月成交趋势图.png'))  # 可选：保存图表
+            plt.show()
+            print('新房二手房近6个月成交趋势图已生成！')
 
 
 if __name__ == '__main__':

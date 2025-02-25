@@ -22,6 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JackCaiZhang&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JackCaiZhang/morning8am_report.git&quot;,
+    &quot;accountId&quot;: &quot;a3ee50d3-2eed-42a4-b736-285e53140d4c&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -177,7 +189,7 @@
       <workItem from="1739256858601" duration="1605000" />
       <workItem from="1739841654031" duration="2502000" />
       <workItem from="1740465184138" duration="3216000" />
-      <workItem from="1740473495556" duration="7515000" />
+      <workItem from="1740473495556" duration="8154000" />
     </task>
     <task id="LOCAL-00001" summary="2025-02-25">
       <option name="closed" value="true" />

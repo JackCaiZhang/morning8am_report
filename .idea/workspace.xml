@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1d733a7-2d0f-4446-8453-c655e5515eca" name="Changes" comment="2025-02-25">
+    <list default="true" id="d1d733a7-2d0f-4446-8453-c655e5515eca" name="Changes" comment="代码优化：月度天数获取及图表生成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report_8am_morning.py" beforeDir="false" afterPath="$PROJECT_DIR$/Report_8am_morning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_files/报告原始日度数据-周度.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data_files/报告原始日度数据-周度.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_files/报告数据-周度.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data_files/报告数据-周度.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +177,7 @@
       <workItem from="1739256858601" duration="1605000" />
       <workItem from="1739841654031" duration="2502000" />
       <workItem from="1740465184138" duration="3216000" />
-      <workItem from="1740473495556" duration="6273000" />
+      <workItem from="1740473495556" duration="7515000" />
     </task>
     <task id="LOCAL-00001" summary="2025-02-25">
       <option name="closed" value="true" />
@@ -191,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740470060952</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="代码优化：月度天数获取及图表生成">
+      <option name="closed" value="true" />
+      <created>1740480464160</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740480464160</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,11 +214,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2025-02-25" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025-02-25" />
+    <MESSAGE value="代码优化：月度天数获取及图表生成" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码优化：月度天数获取及图表生成" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/morning8am_report$test.coverage" NAME="test Coverage Results" MODIFIED="1735199397797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/morning8am_report$utils.coverage" NAME="utils Coverage Results" MODIFIED="1733485574057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/morning8am_report$main.coverage" NAME="main Coverage Results" MODIFIED="1740476782601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/morning8am_report$main.coverage" NAME="main Coverage Results" MODIFIED="1740480188991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
